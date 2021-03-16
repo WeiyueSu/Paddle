@@ -200,7 +200,7 @@ GraphNode *GraphTable::find_node(uint64_t id) {
 uint32_t GraphTable::get_thread_pool_index(uint64_t node_id) {
   return node_id % shard_num_per_table % task_pool_size_;
 }
-int GraphTable::random_sample(uint64_t* node_ids, int sample_size,
+int32_t GraphTable::random_sample(uint64_t* node_ids, int sample_size,
                                   std::vector<char*>& buffers, std::vector<int> &actual_sizes) {
   size_t node_num = buffers.size();
   std::vector<std::future<int>> tasks;

@@ -71,7 +71,7 @@ class GraphTable : public SparseTable {
   virtual ~GraphTable() {}
   virtual int32_t pull_graph_list(int start, int size, char *&buffer,
                                   int &actual_size);
-  virtual int random_sample(uint64_t* node_ids, int sampe_size, std::vector<char *>&buffers,
+  virtual int32_t random_sample(uint64_t* node_ids, int sampe_size, std::vector<char *>&buffers,
                                 std::vector<int> &actual_sizes);
   virtual int32_t initialize();
 
